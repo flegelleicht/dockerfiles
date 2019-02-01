@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  rails:
+    image: flgl/rails:5.2.2
+    hostname: rails
+    container_name: rails
+    volumes:
+      - .:/app:cached
+    ports:
+      - "3000:3000"
+    tty: true
+    stdin_open: true
+  
